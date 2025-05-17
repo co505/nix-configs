@@ -18,6 +18,19 @@
   boot.loader.efi.canTouchEfiVariables = true;
 
   
+  #### Programs & Services enabled ####
+  
+  programs.zsh.enable = true;
+  programs.firefox.enable = true;
+  
+  services.xserver.enable = true;
+  services.displayManager.sddm.enable = true;
+  services.desktopManager.plasma6.enable = true;
+
+  programs.steam.enable = true;
+  programs.steam.gamescopeSession.enable = true;
+  programs.gamemode.enable = true;
+ 
   #### Unfree Setting
   
   nixpkgs.config.allowUnfree = true;
@@ -47,22 +60,6 @@
   networking.networkmanager.enable = true;  # Easiest to use and most distros use this by default.
 
  
-
-  #### Programs & Services enabled ####
-  
-  programs.zsh.enable = true;
-  programs.firefox.enable = true;
-  
-  services.xserver.enable = true;
-  services.displayManager.sddm.enable = true;
-  services.desktopManager.plasma6.enable = true;
-
-  programs.steam.enable = true;
-  programs.steam.gamescopeSession.enable = true;
-  programs.gamemode.enable = true;
-
-
-  
   #### Audio settings ####
   
   services.pipewire = {
@@ -130,6 +127,7 @@
      nil
      cargo
      nerdfonts
+     oxygen
   ];
 
   #### GPU (Nvidia) & Gaming related settings ####
