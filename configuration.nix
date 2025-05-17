@@ -12,10 +12,15 @@
     ];
 
   
-  #### Use the systemd-boot EFI boot loader.
+  #### Use the systemd-boot EFI boot loader. ####
   
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
+
+  
+  #### Unfree Setting
+  
+  nixpkgs.config.allowUnfree = true;
 
  
   #### Time zone and internationalisation properties ####
