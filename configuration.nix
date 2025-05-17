@@ -5,12 +5,15 @@
 { config, lib, pkgs, ... }:
 
 {
+  
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
     ];
 
+  
   #### Use the systemd-boot EFI boot loader.
+  
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
@@ -56,6 +59,7 @@
 
   
   #### Audio settings ####
+  
   services.pipewire = {
      enable = true;
      pulse.enable = true;
@@ -120,6 +124,7 @@
      gcc
      nil
      cargo
+     nerdfonts
   ];
 
   #### GPU (Nvidia) & Gaming related settings ####
@@ -155,8 +160,9 @@
 
     # Optionally, you may need to select the appropriate driver version for your specific GPU.   package = config.boot.kernelPackages.nvidiaPackages.stable;
     package = config.boot.kernelPackages.nvidiaPackages.stable;
-  }:
-  
+  };
+
+
   ## Enable OpenGL and NVIDIA service
   hardware.graphics = {
     enable = true;
@@ -164,7 +170,7 @@
   };
 
 
-  system.stateVersion = "24.11"; # Did you read the comment?
+  system.stateVersion = "24.11";
 
   
   #### Features to use later ####
