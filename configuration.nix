@@ -93,7 +93,6 @@
      zsh
      git
      fastfetch
-     mullvad
      vagrant
      virtualbox
      uv
@@ -104,22 +103,12 @@
      eza
      ansible
      btop
-     steam
-     spotify
-     slack
-     wine-staging
      ghostty
-     librewolf
      gparted
      isoimagewriter
-     discord
      atuin
      alacritty
-     jetbrains.jdk
-     kate
      mariadb
-     protonup
-     lutris
      home-manager
      zsh-syntax-highlighting
      zsh-autosuggestions
@@ -127,7 +116,6 @@
      nil
      cargo
      nerdfonts
-     oxygen
   ];
 
   #### GPU (Nvidia) & Gaming related settings ####
