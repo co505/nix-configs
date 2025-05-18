@@ -33,15 +33,13 @@
     history.size = 10000;
   
   };
-
-  
+ 
   programs.oh-my-posh = {
     enable = true; 
     useTheme = "emodipt-extend";
     enableZshIntegration = true;
   };
  
-
   programs.ghostty.settings = {
     theme = "Kanagawa Dragon";
   };
@@ -49,6 +47,7 @@
   nixpkgs.config.allowUnfree = true;
 
   #### Home Packages ####
+  
   home.packages = [
     pkgs.steam
     pkgs.wine-staging
@@ -63,6 +62,9 @@
     pkgs.slack
     pkgs.protonup
     pkgs.oxygen
+    pkgs.chromium
+    pkgs.jetbrains.pycharm-professional
+    pkgs.globalprotect-openconnect
   ];
 
 
