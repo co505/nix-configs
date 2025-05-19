@@ -49,8 +49,18 @@
   #   keyMap = "us";
   #   useXkbConfig = true; # use xkb.options in tty.
   # };
-
-
+  
+  environment.variables = {
+    # Tell many tools to emit ANSI colours
+    CLICOLOR      = "1";
+    # A good default LS colour scheme on BSD/OSX style; you can tweak
+    LSCOLORS      = "ExFxBxDxCxegedabagacad";
+    # Some tools also look at these:
+    TERM          = "xterm-256color";
+    COLORTERM     = "truecolor";
+  };
+  
+  
   #### Networking settings ####
 
   networking.hostName = "nixos"; # Define your hostname.
@@ -116,6 +126,7 @@
      nil
      cargo
      nerdfonts
+     globalprotect-openconnect
   ];
 
   #### GPU (Nvidia) & Gaming related settings ####

@@ -8,6 +8,7 @@
 
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
+  programs.atuin.enable = true;
 
 
   #### ZSH setup #### 
@@ -23,6 +24,8 @@
     shellAliases = {
       ls     = "eza -l";
       update = "sudo nixos-rebuild switch";
+      upgrade = "sudo nixos-rebuild switch --upgrade";
+      home_update = "home-manager switch";
       v = "nvim";
       edit_config = "nvim /etc/nixos/configuration.nix";
       edit_hardware = "sudo nvim /etc/nixos/hardware-configuration.nix";
@@ -64,7 +67,6 @@
     pkgs.oxygen
     pkgs.chromium
     pkgs.jetbrains.pycharm-professional
-    pkgs.globalprotect-openconnect
   ];
 
 
@@ -75,7 +77,7 @@
  };
 
  home.sessionVariables = {
-    # EDITOR = "emacs";
+    EDITOR = "vim";
   };
  
   home.stateVersion = "24.05"; # Please read the comment before changing.
